@@ -1,0 +1,114 @@
+/* Configs padrões */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fim Configs padrões */
+
+
+
+/* Conigs Banner */
+
+.banner-container{
+    padding-top: 20px;
+    max-height: 100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* FIM configs banner */
+
+
+/* Início configs titulo de categoria */
+
+.category-page{
+    padding-top: 80px;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    width: 90%;
+}
+
+/* FIM titulo de categoria */
+
+
+
+
+/* Início container de produtos */
+
+/* .container-mais-vendidos{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  } */
+  
+  .products-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 4 colunas iguais */
+    padding: 10%; /* Espaçamento interno, se necessário */
+    gap: 10px;
+  }
+  
+  .products-container .product{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1) ;
+    border-radius: 10px;
+    transition: transform 0.5s;
+  }
+
+  .products-container .product .image img{
+    width: 100%;
+    height: auto;
+  }
+
+  .products-container .product .information{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    justify-content: space-between;
+    color: #333;
+  }
+
+  .products-container .product .information h2{
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .products-container .product .information h1{
+    font-size: 20px;
+    text-align: center;
+    margin-top: auto;
+    color: rgb(15, 16, 89);
+  }
+
+  .products-container .product .information button{
+    width: 90%;
+    background: rgba(237, 111, 34, 1);
+    border: none;
+    color: white;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+
+  .products-container .product .information button a{
+    text-decoration: none;
+    color: white;
+  }
+  
+
+/* FIM container de produtos */
+
