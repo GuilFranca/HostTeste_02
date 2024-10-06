@@ -1,0 +1,106 @@
+body, ul{ 
+    margin: 0px;
+    padding: 0px; /*Tirando estilos padrões*/ 
+}
+
+
+#logo img{
+    width: 50%;
+}
+
+#header{ /*Posicionamento dos elementos*/
+    box-sizing: border-box; /*Faz com que o menu sempre tenha 70px de altura, sem somar o valor de height com o de padding*/
+    height: 70px;
+    padding: 1rem; /*Distância até a borda 1rem = 16px*/
+    display: flex;  /*Posiciona os itens um ao lado do outro*/
+    align-items: center; /*Centraliza verticalmente o conteúdo*/
+    justify-content: space-between; /*Coloca um espaçamento entre os itens (Logo e menu)*/
+    background: #2B2D80; /*Cor de fundo do cabeçalho*/
+}
+
+#menu{
+    display: flex; /*Posiciona os itens um ao lado do outro*/
+    list-style: none; /*Tira a bolinha da lista*/
+    gap: .5rem; /*Coloca um espaçamento em cada um dos itens flex*/
+}
+
+#menu a{
+    display: block; /*Setado para block para que seja possível definir o padding do mesmo*/
+    padding: .5rem;
+}
+
+#btn-mobile{
+    display: none;  /*Esconde o botão enquanto estiver em uma resolução de desktop*/
+}
+
+@media (max-width: 600px) { /*Condição para que o que está dentro dos parênteses acontecer somente quando a resolução for menor do que 600px*/
+    
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #e7e7e7;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a{
+        text-decoration: none;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: white;
+    }
+
+    #hamburger{
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+}

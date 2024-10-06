@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/homeStyles.css">
+    <link rel="stylesheet" href="./css/headerStyles.css">
     <link rel="icon"  href="./img/FavSolucao.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Home</title>
 </head>
 <body>
     
+    <header id="header"> <!--cabeçalho-->
+        
+        <a id="logo" href=""><img src="./img/logoSolucao.png" alt="Logo"></a> <!--Logo-->
+
+        <nav id="nav"> <!--Seção de navegação-->
+            <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                
+                <!--Botão de Menu mobile-->
+
+                <span id="hamburger"></span> 
+
+            </button>
+            <ul id="menu" role="menu"> <!--Menu-->
+                <li><a href="#">PRODUTOS</a></li>
+                <li><a href="#">ASSISÊNCIA</a></li>    <!--Itens-->
+                <li><a href="#">CONTATO</a></li>    
+                <li><a href="#">SOBRE NÓS</a></li>
+            </ul>
+        </nav>
+
+
+        <script src="./js/script.js"></script>
+    </header>
+
     <main>
         
         <section class="banner-container">
