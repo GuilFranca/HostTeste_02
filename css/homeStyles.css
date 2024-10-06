@@ -53,7 +53,7 @@ main{
   .products-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Cria 4 colunas iguais */
-    padding: 5%; /* Espaçamento interno, se necessário */
+    padding: 10%; /* Espaçamento interno, se necessário */
     gap: 10px;
   }
   
@@ -65,6 +65,7 @@ main{
     transition: transform 0.5s;
   }
 
+  
   .products-container .product .image img{
     width: 100%;
     height: auto;
