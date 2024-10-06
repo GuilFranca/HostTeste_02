@@ -3,11 +3,6 @@ body, ul{
     padding: 0px; /*Tirando estilos padrões*/ 
 }
 
-
-#logo img{
-    width: 50%;
-}
-
 #header{ /*Posicionamento dos elementos*/
     box-sizing: border-box; /*Faz com que o menu sempre tenha 70px de altura, sem somar o valor de height com o de padding*/
     height: 70px;
@@ -18,13 +13,22 @@ body, ul{
     background: #2B2D80; /*Cor de fundo do cabeçalho*/
 }
 
+header #logo img{
+    width: 200px;
+    height: auto;
+}
+
 #menu{
+    align-items: center;    
     display: flex; /*Posiciona os itens um ao lado do outro*/
     list-style: none; /*Tira a bolinha da lista*/
-    gap: .5rem; /*Coloca um espaçamento em cada um dos itens flex*/
+    flex-direction: row;
 }
 
 #menu a{
+    align-items: center;
+    text-decoration: none;
+    color: white;
     display: block; /*Setado para block para que seja possível definir o padding do mesmo*/
     padding: .5rem;
 }
@@ -33,8 +37,19 @@ body, ul{
     display: none;  /*Esconde o botão enquanto estiver em uma resolução de desktop*/
 }
 
+
+
+
 @media (max-width: 600px) { /*Condição para que o que está dentro dos parênteses acontecer somente quando a resolução for menor do que 600px*/
     
+    .categorias{
+        display: none;
+    }
+
+    #logo img{
+        width: 200px;
+    }
+
     #menu{
         display: block;
         position: absolute;
@@ -56,6 +71,7 @@ body, ul{
     }
 
     #menu a{
+        color: #2B2D80;
         text-decoration: none;
         padding: 1rem 0;
         margin: 0 1rem;
